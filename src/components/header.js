@@ -83,25 +83,23 @@ const headerSiteTitleStyle = css`
 `
 
 const headerLinksLetterStyle = css`
-    &:hover &:after {
-      opacity: 1;
-      color: red;
+    &:hover&::after{
+        opacity: 1;
+        transform: translateZ(0) scale3d(1.1, 1.1, 1.1)
     }
-  }
-  &:after {
-    z-index: 5;
-    content: "";
-    width: 100%;
-    bottom: 0px;
-    height: 3px;
-    left: 0;
-    display: block;
-    background: #ffc4ff;
-    transform: translate3d(0, 5px, 0);
-    transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    opacity: 1;
-    color: red;
-  }
+    &::after {
+        z-index: 5;
+        content: "";
+        width: 100%;
+        bottom: 0px;
+        height: 3px;
+        left: 0;
+        display: block;
+        background: rgb(60,76,87);
+        transform: translate3d(0, 5px, 0);
+        transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        opacity: 0;
+    }
 `
 
 Header.propTypes = {
