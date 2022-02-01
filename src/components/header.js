@@ -12,22 +12,22 @@ const Header = ({ siteTitle }) => (
       <ul css={headerListStyle}>
         <li css={headerListItemStyle}>
           <Link to="/page-2/" css={headerLinksStyleFirst}>
-            <span css={headerLinksLetterStyle}>Work</span>
+            <span>Work</span>
           </Link>
         </li>
         <li css={headerListItemStyle}>
           <Link to="/using-typescript/" css={headerLinksStyle}>
-            <span css={headerLinksLetterStyle}>Social</span>
+            <span>Social</span>
           </Link>
         </li>
         <li css={headerListItemStyle}>
           <Link to="/using-ssr" css={headerLinksStyle}>
-            <span css={headerLinksLetterStyle}>About</span>
+            <span>About</span>
           </Link>
         </li>
         <li css={headerListItemStyle}>
           <Link to="/" css={headerSiteTitleStyle}>
-            <span css={headerLinksLetterStyle}>Home</span>
+            <span>Home</span>
           </Link>
         </li>
       </ul>
@@ -36,10 +36,10 @@ const Header = ({ siteTitle }) => (
 )
 
 const header = css`
-  ${"" /* background: rgb(60,76,87); */}
   position: fixed;
   width: 100%;
-  border-radius: 10px;
+  background-color: rgb(211,208,199);
+    z-index: 1000;
 `
 
 const headerInnerStyle = css`
@@ -66,6 +66,25 @@ const headerLinksStyle = css`
   text-align: center;
   text-decoration: none;
   padding: 1.5em 2em;
+  span::after {
+      opacity: 0;
+      z-index: 5;
+      content: "";
+      width: 100%;
+      bottom: 0px;
+      height: 3px;
+      left: 0;
+      display: block;
+      background: rgb(60, 76, 87);
+      transform: translate3d(0, 5px, 0);
+      transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  &:hover span {
+    &::after {
+      opacity: 1;
+      transform: translateZ(0) scale3d(1.1, 1.1, 1.1);
+    }
+  }
 `
 const headerLinksStyleFirst = css`
   ${headerLinksStyle}
@@ -80,26 +99,6 @@ const headerSiteTitleStyle = css`
   position: absolute;
   left: 50%;
   transform: translate3d(-50%, 0, 0);
-`
-
-const headerLinksLetterStyle = css`
-    &:hover&::after{
-        opacity: 1;
-        transform: translateZ(0) scale3d(1.1, 1.1, 1.1)
-    }
-    &::after {
-        z-index: 5;
-        content: "";
-        width: 100%;
-        bottom: 0px;
-        height: 3px;
-        left: 0;
-        display: block;
-        background: rgb(60,76,87);
-        transform: translate3d(0, 5px, 0);
-        transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        opacity: 0;
-    }
 `
 
 Header.propTypes = {

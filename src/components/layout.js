@@ -45,7 +45,7 @@ const wrapperStyle = css`
   background: rgb(211,208,199);
   margin: 0 auto;
   max-width: 960px;
-  padding: 14rem 1.0875rem 1.45rem;
+  padding: 6rem 1.0875rem 1.45rem;
 `
 const footerStyle = css`
   margin-top: 2rem;
