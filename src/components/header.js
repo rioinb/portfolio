@@ -11,8 +11,8 @@ const Header = ({ siteTitle }) => (
     <div css={headerInnerStyle}>
       <ul css={headerListStyle}>
         <li css={headerListItemStyle}>
-          <Link to="/page-2/" css={headerLinksStyleFirst}>
-            <span>Work</span>
+          <Link to="/about" css={headerLinksStyleFirst}>
+            <span>About</span>
           </Link>
         </li>
         <li css={headerListItemStyle}>
@@ -21,8 +21,8 @@ const Header = ({ siteTitle }) => (
           </Link>
         </li>
         <li css={headerListItemStyle}>
-          <Link to="/using-ssr" css={headerLinksStyle}>
-            <span>About</span>
+          <Link to="/page-2/" css={headerLinksStyle}>
+            <span>Work</span>
           </Link>
         </li>
         <li css={headerListItemStyle}>

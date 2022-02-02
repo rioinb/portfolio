@@ -13,6 +13,8 @@ import styled from "@emotion/styled"
 import { css } from "@emotion/react"
 
 import Header from "./header"
+import Wrapper from "./wrapper"
+
 import "./layout.css"
 
 const Layout = ({ children }) => {
@@ -29,26 +31,21 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <div css={wrapperStyle}>
         <main>{children}</main>
-        <footer css={footerStyle}>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
-        </footer>
-      </div>
+        <Wrapper>
+            <footer css={footerStyle}>
+                © {new Date().getFullYear()}, Built with
+                {` `}
+                <a href="https://www.gatsbyjs.com">Gatsby</a>
+            </footer>
+        </Wrapper>
     </>
   )
 }
 
-const wrapperStyle = css`
-  background: rgb(211,208,199);
-  margin: 0 auto;
-  max-width: 960px;
-  padding: 6rem 1.0875rem 1.45rem;
-`
 const footerStyle = css`
   margin-top: 2rem;
+  text-align: center;
 `
 
 Layout.propTypes = {

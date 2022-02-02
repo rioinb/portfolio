@@ -5,7 +5,7 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Wrapper from "../components/wrapper"
 
-const UsingSSR = ({ serverData }) => {
+const About = ({ serverData }) => {
   return (
     <Layout>
       <Seo title="Using SSR" />
@@ -30,7 +30,7 @@ const UsingSSR = ({ serverData }) => {
   )
 }
 
-export default UsingSSR
+export default About
 
 export async function getServerData() {
   try {
