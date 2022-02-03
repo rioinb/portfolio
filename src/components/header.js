@@ -52,9 +52,7 @@ const headerListStyle = css`
   max-width: 90%;
   padding: unset;
   display: flex;
-  display: flex;
   justify-content: start;
-  alignitems: center;
   list-style-type: none;
 `
 
@@ -66,18 +64,23 @@ const headerLinksStyle = css`
   text-align: center;
   text-decoration: none;
   padding: 1.5em 2em;
+  font-size: 1.1em;
+  span {
+    position: relative;
+  }
   span::after {
+      position: absolute;
       opacity: 0;
       z-index: 5;
       content: "";
       width: 100%;
-      bottom: 0px;
-      height: 3px;
+      bottom: -10px;
+      height: 5px;
       left: 0;
       display: block;
-      background: rgb(60, 76, 87);
+      background: #95cd75;
       transform: translate3d(0, 5px, 0);
-      transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   }
   &:hover span {
     &::after {
@@ -94,8 +97,6 @@ const headerLinksStyleFirst = css`
 const headerSiteTitleStyle = css`
   ${headerLinksStyle}
   display: block;
-  position: absolute;
-  left: 50%;
   position: absolute;
   left: 50%;
   transform: translate3d(-50%, 0, 0);

@@ -32,19 +32,18 @@ const Layout = ({ children }) => {
     <>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
         <main>{children}</main>
-        <Wrapper>
-            <footer css={footerStyle}>
+
+        <footer css={footerStyle}>
                 © {new Date().getFullYear()}, Built with
                 {` `}
                 <a href="https://www.gatsbyjs.com">Gatsby</a>
-            </footer>
-        </Wrapper>
+        </footer>
     </>
   )
 }
 
 const footerStyle = css`
-  margin-top: 2rem;
+  margin: 2rem auto;
   text-align: center;
 `
 

@@ -19,8 +19,8 @@ const Wrapper = ({ children }) => {
 const wrapperStyle = css`
   background: rgb(211,208,199);
   margin: 0 auto;
-  max-width: 960px;
-  padding: 6rem 1.0875rem 1.45rem;
+  max-width: 1200px;
+  padding: 10rem 1.0875rem 0 1.0875rem;
 `
 
 Wrapper.propTypes = {
