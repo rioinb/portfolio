@@ -14,8 +14,8 @@ const Header = ({ siteTitle }) => (
             <ul css={headerListStyle}>
                 <HeaderLinkItem title="Home" link="" />
                 <HeaderLinkItem title="About" link="about" />
-                <HeaderLinkItem title="Social" link="social" />
-                <HeaderLinkItem title="Work" link="work" />
+                {/* <HeaderLinkItem title="Social" link="social" />
+                <HeaderLinkItem title="Work" link="work" /> */}
             </ul>
         </div>
     </header>
