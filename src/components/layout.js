@@ -18,7 +18,7 @@ import Wrapper from "./wrapper"
 import "./layout.css"
 
 const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
+    const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
         siteMetadata {
@@ -28,18 +28,18 @@ const Layout = ({ children }) => {
     }
   `)
 
-  return (
-    <>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-        <main>{children}</main>
+    return (
+        <>
+            <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+            <main>{children}</main>
 
-        <footer css={footerStyle}>
+            <footer css={footerStyle}>
                 © {new Date().getFullYear()}, Built with
                 {` `}
                 <a href="https://www.gatsbyjs.com">Gatsby</a>
-        </footer>
-    </>
-  )
+            </footer>
+        </>
+    )
 }
 
 const footerStyle = css`
@@ -48,7 +48,7 @@ const footerStyle = css`
 `
 
 Layout.propTypes = {
-  children: PropTypes.node.isRequired,
+    children: PropTypes.node.isRequired,
 }
 
 export default Layout
