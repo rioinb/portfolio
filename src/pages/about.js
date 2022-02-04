@@ -8,16 +8,54 @@ import Seo from "../components/seo"
 import Wrapper from "../components/wrapper"
 import { StaticImage } from "gatsby-plugin-image"
 
-const About = () => {
-    return (
-        <Layout>
-            <Seo title="About" />
-            <Wrapper>
-                <section css={profileSectionStyle}>
-                    <div css={[heroImageWrapperStyle, heroImageFadeUp]}>
-                        <div css={heroImageStyle}>
+const About = () => (
+    <Layout>
+        <Seo title="About" />
+        <Wrapper>
+            <section css={profileSectionStyle}>
+                <div css={[heroImageWrapperStyle, heroImageFadeUp]}>
+                    <div css={heroImageStyle}>
+                        <StaticImage
+                            src="../images/gatsby-astronaut.png"
+                            quality={95}
+                            formats={["auto", "webp", "avif"]}
+                            alt="A Gatsby astronaut"
+                            style={{
+                                width: `100%`,
+                                height: `auto`,
+                            }}
+                        />
+                    </div>
+                </div>
+                <div css={[profileInfoStyle, profileInfoFadeUp]}>
+                    <h1 css={profileInfoTitleStyle}>
+                        I'm Ryohei Inaba, <br />a full-stack engineer... to-be.
+                    </h1>
+                    <p css={profileInfoParagraphStyle}>
+                        Working mainly with Laravel as a back-end engineer who practices
+                        passing-grade DDD.
+                    </p>
+
+                    <p css={profileInfoParagraphStyle}>
+                        These days my time is spent to achieve better comprehension of
+                        design and front-end frameworks.
+                    </p>
+
+                    <p css={profileInfoParagraphStyle}>
+                        Out of office you'll find me taking pictures of random stuff on
+                        the streets, or drinking third cup of coffee while reading novels.
+                    </p>
+                </div>
+            </section>
+
+            <section css={techSectionStyle}>
+                <h1 css={techTitle}>Techs I work with</h1>
+                <div css={techGridStyle}>
+                    <div css={techImageStyle}>
+                        <div>
                             <StaticImage
                                 src="../images/gatsby-astronaut.png"
+                                //   width={300}
                                 quality={95}
                                 formats={["auto", "webp", "avif"]}
                                 alt="A Gatsby astronaut"
@@ -28,81 +66,42 @@ const About = () => {
                             />
                         </div>
                     </div>
-                    <div css={[profileInfoStyle, profileInfoFadeUp]}>
-                        <h1 css={profileInfoTitleStyle}>
-                            I'm Ryohei Inaba, <br />a full-stack engineer... to-be.
-                        </h1>
-                        <p css={profileInfoParagraphStyle}>
-                            Working mainly with Laravel as a back-end engineer who practices
-                            passing-grade DDD.
-                        </p>
-
-                        <p css={profileInfoParagraphStyle}>
-                            These days my time is spent to achieve better comprehension of
-                            design and front-end frameworks.
-                        </p>
-
-                        <p css={profileInfoParagraphStyle}>
-                            Out of office you'll find me taking pictures of random stuff on
-                            the streets, or drinking third cup of coffee while reading novels.
-                        </p>
-                    </div>
-                </section>
-
-                <section css={techSectionStyle}>
-                    <h1 css={techTitle}>Techs I work with</h1>
-                    <div css={techGridStyle}>
-                        <div css={techImageStyle}>
-                            <div>
-                                <StaticImage
-                                    src="../images/gatsby-astronaut.png"
-                                    //   width={300}
-                                    quality={95}
-                                    formats={["auto", "webp", "avif"]}
-                                    alt="A Gatsby astronaut"
-                                    style={{
-                                        width: `100%`,
-                                        height: `auto`,
-                                    }}
-                                />
-                            </div>
-                        </div>
-                        <div css={techImageStyle}>
-                            <div>
-                                <StaticImage
-                                    src="../images/gatsby-astronaut.png"
-                                    //   width={300}
-                                    quality={95}
-                                    formats={["auto", "webp", "avif"]}
-                                    alt="A Gatsby astronaut"
-                                    style={{
-                                        width: `100%`,
-                                        height: `auto`,
-                                    }}
-                                />
-                            </div>
-                        </div>
-                        <div css={techImageStyle}>
-                            <div>
-                                <StaticImage
-                                    src="../images/gatsby-astronaut.png"
-                                    //   width={300}
-                                    quality={95}
-                                    formats={["auto", "webp", "avif"]}
-                                    alt="A Gatsby astronaut"
-                                    style={{
-                                        width: `100%`,
-                                        height: `auto`,
-                                    }}
-                                />
-                            </div>
+                    <div css={techImageStyle}>
+                        <div>
+                            <StaticImage
+                                src="../images/gatsby-astronaut.png"
+                                //   width={300}
+                                quality={95}
+                                formats={["auto", "webp", "avif"]}
+                                alt="A Gatsby astronaut"
+                                style={{
+                                    width: `100%`,
+                                    height: `auto`,
+                                }}
+                            />
                         </div>
                     </div>
-                </section>
-            </Wrapper>
-        </Layout>
-    )
-}
+                    <div css={techImageStyle}>
+                        <div>
+                            <StaticImage
+                                src="../images/gatsby-astronaut.png"
+                                //   width={300}
+                                quality={95}
+                                formats={["auto", "webp", "avif"]}
+                                alt="A Gatsby astronaut"
+                                style={{
+                                    width: `100%`,
+                                    height: `auto`,
+                                }}
+                            />
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </Wrapper>
+    </Layout>
+)
+
 
 const profileSectionStyle = css`
   display: flex;
