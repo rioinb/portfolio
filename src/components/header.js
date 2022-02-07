@@ -1,21 +1,17 @@
 import * as React from "react"
 
-import styled from "@emotion/styled"
 import { css } from "@emotion/react"
 
 import PropTypes from "prop-types"
-import { Link } from "gatsby"
 
 import HeaderLinkItem from "./headerListItem"
 
-const Header = ({ siteTitle }) => (
+const Header = () => (
     <header css={header}>
         <div css={headerInnerStyle}>
             <ul css={headerListStyle}>
                 <HeaderLinkItem title="Home" link="" />
                 <HeaderLinkItem title="About" link="about" />
-                {/* <HeaderLinkItem title="Social" link="social" />
-                <HeaderLinkItem title="Work" link="work" /> */}
             </ul>
         </div>
     </header>

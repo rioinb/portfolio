@@ -1,8 +1,6 @@
 import * as React from "react"
-import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
-import styled from "@emotion/styled"
 import { css } from "@emotion/react"
 
 import Layout from "../components/layout"
@@ -19,14 +17,14 @@ const IndexPage = () => (
                         Web <br />
                         Developer
                     </h1>
-                    <h3 css={IndexInfoDescriptionStyle}>
+                    <h2 css={IndexInfoDescriptionStyle}>
                         A back-end engineer at Locust.tech <br />
                         Creating thing you have always wanted, has yet to exist.
-                    </h3>
+                    </h2>
                 </div>
                 <div css={IndexHeroImageStyle}>
                     <StaticImage
-                        src="../images/gatsby-astronaut.png"
+                        src="../images/index-hero.jpg"
                         quality={95}
                         formats={["auto", "webp", "avif"]}
                         alt="A Gatsby astronaut"
