@@ -1,5 +1,4 @@
 import * as React from "react"
-import { Link } from "gatsby"
 
 import { css } from "@emotion/react"
 
@@ -16,7 +15,7 @@ const About = () => (
                 <div css={[heroImageWrapperStyle, heroImageFadeUp]}>
                     <div css={heroImageStyle}>
                         <StaticImage
-                            src="../images/gatsby-astronaut.png"
+                            src="../images/about-hero.jpg"
                             quality={95}
                             formats={["auto", "webp", "avif"]}
                             alt="A Gatsby astronaut"
@@ -54,8 +53,7 @@ const About = () => (
                     <div css={techImageStyle}>
                         <div>
                             <StaticImage
-                                src="../images/gatsby-astronaut.png"
-                                //   width={300}
+                                src="../images/laravel-logo.png"
                                 quality={95}
                                 formats={["auto", "webp", "avif"]}
                                 alt="A Gatsby astronaut"
@@ -69,8 +67,7 @@ const About = () => (
                     <div css={techImageStyle}>
                         <div>
                             <StaticImage
-                                src="../images/gatsby-astronaut.png"
-                                //   width={300}
+                                src="../images/react-logo.png"
                                 quality={95}
                                 formats={["auto", "webp", "avif"]}
                                 alt="A Gatsby astronaut"
@@ -84,8 +81,7 @@ const About = () => (
                     <div css={techImageStyle}>
                         <div>
                             <StaticImage
-                                src="../images/gatsby-astronaut.png"
-                                //   width={300}
+                                src="../images/gatsby-logo.png"
                                 quality={95}
                                 formats={["auto", "webp", "avif"]}
                                 alt="A Gatsby astronaut"
@@ -202,21 +198,3 @@ const profileInfoFadeUp = css`
 `
 
 export default About
-
-// export async function getServerData() {
-//     try {
-//         const res = await fetch(`https://dog.ceo/api/breeds/image/random`)
-//         if (!res.ok) {
-//             throw new Error(`Response failed`)
-//         }
-//         return {
-//             props: await res.json(),
-//         }
-//     } catch (error) {
-//         return {
-//             status: 500,
-//             headers: {},
-//             props: {},
-//         }
-//     }
-// }
