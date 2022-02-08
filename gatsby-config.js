@@ -18,13 +18,13 @@ module.exports = {
                 policy: [{ userAgent: '*', allow: '/' }]
             }
         },
-        {
-            resolve: `gatsby-plugin-canonical-urls`,
-            options: {
-                siteUrl: `https://rioinb.com`,
-                stripQueryString: true,
-            },
-        },
+        // {
+        //     resolve: `gatsby-plugin-canonical-urls`,
+        //     options: {
+        //         siteUrl: `https://rioinb.com`,
+        //         stripQueryString: true,
+        //     },
+        // },
         {
             resolve: `gatsby-source-filesystem`,
             options: {
