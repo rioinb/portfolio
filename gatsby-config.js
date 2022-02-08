@@ -3,7 +3,7 @@ module.exports = {
         title: `Portfolio of rioinb`,
         description: `Ryohei Inaba - web developer based in Hyogo, Japan`,
         author: `@rioinb`,
-        siteUrl: `https://rioinb.com/`,
+        siteUrl: `https://www.rioinb.com/`,
     },
     plugins: [
         `gatsby-plugin-react-helmet`,
@@ -21,7 +21,7 @@ module.exports = {
         {
             resolve: `gatsby-plugin-canonical-urls`,
             options: {
-                siteUrl: `https://rioinb.com`,
+                siteUrl: `https://www.rioinb.com`,
                 stripQueryString: true,
             },
         },
