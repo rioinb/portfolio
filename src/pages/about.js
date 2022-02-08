@@ -104,6 +104,9 @@ const profileSectionStyle = css`
   max-width: 1200px;
   margin: 0 auto;
   padding-bottom: 10rem;
+  @media (max-width: 850px) {
+      flex-direction: column-reverse;
+  }
 `
 
 const heroImageStyle = css`
@@ -118,11 +121,17 @@ const heroImageStyle = css`
 const heroImageWrapperStyle = css`
   margin: 0 2rem;
   width: 100%;
+  @media (max-width: 850px) {
+      margin: unset;
+  }
 `
 
 const profileInfoStyle = css`
   margin: 0 2rem;
   width: 100%;
+  @media (max-width: 850px) {
+      margin: unset;
+  }
 `
 
 const profileInfoTitleStyle = css`
@@ -139,10 +148,13 @@ const techSectionStyle = css`
   max-width: 1200px;
   margin: 0 2rem;
   padding-bottom: 10rem;
+  @media (max-width: 850px) {
+      margin: unset;
+  }
 `
 
 const techTitle = css`
-    margin-bottom: 4rem; !important
+    margin-bottom: 4rem !important;
 `
 
 const techGridStyle = css`
@@ -150,6 +162,11 @@ const techGridStyle = css`
   grid-template-columns: 1fr 1fr;
   column-gap: 4rem;
   row-gap: 4em;
+  @media (max-width: 850px) {
+    column-gap: 1rem;
+    row-gap: 1rem;
+
+  }
 `
 
 const techImageStyle = css`

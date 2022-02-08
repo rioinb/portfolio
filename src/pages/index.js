@@ -44,16 +44,24 @@ const IndexPage = () => (
 const indexInfoSection = css`
     display: flex;
     margin-bottom: 8rem;
+    @media (max-width: 850px) {
+        flex-direction: column-reverse;
+    }
 `
 
 const IndexInfoStyle = css`
     flex: 1;
     margin: 0 2rem;
-
+    @media (max-width: 850px) {
+        margin: 2rem 0 0 0 ;
+    }
 `
 
 const IndexInfoTitleStyle = css`
     font-size: 80px;
+    @media (max-width: 850px) {
+        font-size: 36px;
+    }
 `
 
 const IndexInfoDescriptionStyle = css`
@@ -61,12 +69,14 @@ const IndexInfoDescriptionStyle = css`
 `
 
 const IndexHeroImageStyle = css`
-    ${'' /* width: fit-content; */}
     height: fit-content;
     flex: 1;
     margin: 0 2rem;
     border-radius: 20px;
     overflow: hidden;
+    @media (max-width: 850px) {
+        margin: unset;
+    }
 `
 
 const fadeIn = css`
