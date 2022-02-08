@@ -26,6 +26,9 @@ const headerLinksStyle = css`
   text-decoration: none;
   padding: 1.5em 2em;
   font-size: 1.1em;
+  @media (max-width: 850px) {
+      padding: 1.5rem 0.5rem;
+  }
   span {
     position: relative;
   }

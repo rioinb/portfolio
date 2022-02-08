@@ -18,19 +18,21 @@ const Header = () => (
 )
 
 const header = css`
-  position: fixed;
-  width: 100%;
-  background-color: rgb(211,208,199);
+    position: fixed;
+    width: 100%;
+    margin: 0 auto;
+    background-color: rgb(211,208,199);
     z-index: 1000;
 `
 
 const headerInnerStyle = css`
-  margin: unset;
-  position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
 `
 
 const headerListStyle = css`
-  margin: 0 auto;
+  margin: 0 auto 0 1.0875rem;
   max-width: 90%;
   padding: unset;
   display: flex;
