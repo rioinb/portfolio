@@ -21,7 +21,7 @@ module.exports = {
         {
             resolve: `gatsby-plugin-canonical-urls`,
             options: {
-                siteUrl: `https://www.rioinb.com`,
+                siteUrl: `https://rioinb.com`,
                 stripQueryString: true,
             },
         },
