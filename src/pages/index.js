@@ -18,8 +18,8 @@ const IndexPage = () => (
                         Developer
                     </h1>
                     <h2 css={IndexInfoDescriptionStyle}>
-                        A back-end engineer at Locust.tech <br />
-                        Creating thing you have always wanted, has yet to exist.
+                        A back-end engineer at Locust.tech. <br />
+                        Creating a thing you have always wanted, has yet to exist.
                     </h2>
                 </div>
                 <div css={IndexHeroImageStyle}>
