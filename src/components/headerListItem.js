@@ -18,6 +18,11 @@ const HeaderListItem = ({ link, title }) => {
 
 const headerListItemStyle = css`
   margin: unset;
+  list-style: none;
+  @media (max-width: 850px) {
+    justify-content: center;
+    display: flex;
+  }
 `
 
 const headerLinksStyle = css`
