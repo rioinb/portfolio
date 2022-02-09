@@ -191,7 +191,7 @@ const headerScreenInnerStyle = css`
 `
 
 const headerScreenListStyle = css`
-    margin: 0 auto;
+    margin: 0 auto 0 1.0875rem;
     max-width: 90%;
     padding: unset;
     display: flex;
