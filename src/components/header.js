@@ -156,6 +156,7 @@ const mobileMenuOpenStyle = css`
     flex-direction: column;
     height: 100vh;
     width: 100%;
+    padding-bottom: 100px;
     background-color: rgb(211,208,199, 0.9);
 
     animation-name:fadeInAnime;
