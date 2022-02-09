@@ -9,12 +9,17 @@ module.exports = {
         `gatsby-plugin-react-helmet`,
         `gatsby-plugin-image`,
         `gatsby-plugin-emotion`,
-        `gatsby-plugin-sitemap`,
+        {
+            resolve: `gatsby-plugin-sitemap`,
+            options: {
+                excludes: [`/using-typescript/`, `/using-dsg/`, `/page-2/`, `/using-ssr/`]
+            }
+        },
         {
             resolve: 'gatsby-plugin-robots-txt',
             options: {
                 host: 'https://www.rioinb.com',
-                sitemap: 'https://www.rioinb.com/sitemap.xml',
+                sitemap: 'https://www.rioinb.com/sitemap/sitemap-0.xml',
                 policy: [{ userAgent: '*', allow: '/' }]
             }
         },
