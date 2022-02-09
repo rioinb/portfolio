@@ -60,7 +60,7 @@ const headerMobileStyle = css`
     @media (max-width: 850px) {
         width: 100%;
         z-index: 1000;
-
+        padding: 0 1.0875rem 0 1.0875rem;
         position: fixed;
         display: block;
     }
