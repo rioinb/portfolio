@@ -9,9 +9,6 @@ import { useState } from "react"
 
 function Header() {
     const [open, setOpen] = useState(false);
-    const toggle = () => {
-        setOpen(!open);
-    };
     return (
         <>
             <header css={headerMobileStyle}>
@@ -19,11 +16,11 @@ function Header() {
                     <div css={mobileMenuButtonStyle}>
                         {
                             open ?
-                                <div css={closeButtonStyle} onClick={toggle}>
+                                <div css={closeButtonStyle} onClick={() => setOpen(!open)}>
                                     <span></span><span></span><span></span>
                                 </div>
                                 :
-                                <div css={openButtonStyle} onClick={toggle}>
+                                <div css={openButtonStyle} onClick={() => setOpen(!open)}>
                                     <span></span><span></span><span></span>
                                 </div>
                         }
@@ -132,7 +129,6 @@ const mobileMenuClosedStyle = css`
     height: 100vh;
     width: 100%;
     background-color: rgb(211,208,199, 0.9);
-
     animation-name:fadeOutAnime;
 	animation-duration: 1s;
 	animation-fill-mode:forwards;
@@ -142,7 +138,6 @@ const mobileMenuClosedStyle = css`
         from {
             opacity: 1;
         }
-
         to {
             opacity:0;
         }
@@ -158,7 +153,6 @@ const mobileMenuOpenStyle = css`
     width: 100%;
     padding-bottom: 100px;
     background-color: rgb(211,208,199, 0.9);
-
     animation-name:fadeInAnime;
 	animation-duration: 1s;
 	animation-fill-mode:forwards;
